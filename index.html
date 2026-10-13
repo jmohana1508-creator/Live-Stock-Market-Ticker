@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stock Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>📈 StockTrack</h2>
+
+        <div>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#market">Market</a>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+
+    <h1 id="dashboard">Live Stock Market Ticker</h1>
+
+
+    <!-- Live Market -->
+    <section class="market" id="market">
+
+        <h2>Live Market</h2>
+
+        <input
+            type="text"
+            id="stock-search"
+            placeholder="Search stock..."
+        >
+
+        <div class="stock-container">
+
+            <div class="stock-card">
+                <h3>TCS</h3>
+                <p id="tcs-price">₹3421.50</p>
+                <span id="tcs-change">▲ +1.25%</span>
+                <br><br>
+
+                <button onclick="addStock('TCS')">
+                    Add to Portfolio
+                </button>
+            </div>
+
+
+            <div class="stock-card">
+                <h3>INFY</h3>
+                <p id="infy-price">₹1845.20</p>
+                <span id="infy-change">▼ -0.54%</span>
+                <br><br>
+
+                <button onclick="addStock('INFY')">
+                    Add to Portfolio
+                </button>
+            </div>
+
+
+            <div class="stock-card">
+                <h3>RELIANCE</h3>
+                <p id="reliance-price">₹2910.80</p>
+                <span id="reliance-change">▲ +0.82%</span>
+                <br><br>
+
+                <button onclick="addStock('RELIANCE')">
+                    Add to Portfolio
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+
+        <h2>My Portfolio</h2>
+
+
+        <div class="summary-container">
+
+            <div class="summary-card">
+                <h3>Total Investment</h3>
+                <p>₹<span id="total-investment">50000</span></p>
+            </div>
+
+
+            <div class="summary-card">
+                <h3>Current Value</h3>
+                <p>₹<span id="current-value">52500</span></p>
+            </div>
+
+
+            <div class="summary-card">
+                <h3>Profit</h3>
+                <p>₹<span id="profit">2500</span></p>
+            </div>
+
+        </div>
+
+
+        <div class="holdings">
+
+            <h3>My Stocks</h3>
+
+            <table>
+
+                <tr>
+                    <th>Stock</th>
+                    <th>Quantity</th>
+                    <th>Buy Price</th>
+                    <th>Current Price</th>
+                    <th>Action</th>
+                </tr>
+
+
+                <tr>
+                    <td>TCS</td>
+                    <td id="tcs-quantity">10</td>
+                    <td>₹3200</td>
+                    <td id="tcs-current-price">₹3421.50</td>
+
+                    <td>
+                        <button onclick="buyStock('TCS')">
+                            Buy
+                        </button>
+
+                        <button onclick="sellStock('TCS')">
+                            Sell
+                        </button>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>INFY</td>
+                    <td id="infy-quantity">15</td>
+                    <td>₹1700</td>
+                    <td id="infy-current-price">₹1845.20</td>
+
+                    <td>
+                        <button onclick="buyStock('INFY')">
+                            Buy
+                        </button>
+
+                        <button onclick="sellStock('INFY')">
+                            Sell
+                        </button>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>RELIANCE</td>
+                    <td id="reliance-quantity">5</td>
+                    <td>₹2800</td>
+                    <td id="reliance-current-price">₹2910.80</td>
+
+                    <td>
+                        <button onclick="buyStock('RELIANCE')">
+                            Buy
+                        </button>
+
+                        <button onclick="sellStock('RELIANCE')">
+                            Sell
+                        </button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

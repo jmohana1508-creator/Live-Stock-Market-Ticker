@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockTrack Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h2>📈 StockTrack</h2>
+        <p>Login to continue</p>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+        function login() {
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            if (username === "admin" && password === "1234") {
+
+                message.innerText = "Login successful!";
+                message.style.color = "green";
+
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 500);
+
+            } else {
+
+                message.innerText = "Invalid username or password!";
+                message.style.color = "red";
+
+            }
+        }
+    </script>
+
+</body>
+</html>

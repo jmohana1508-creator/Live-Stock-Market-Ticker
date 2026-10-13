@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+h1 {
+    padding: 30px 40px 10px;
+}
+
+.market {
+    padding: 20px 40px;
+}
+
+.stock-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stock-card {
+    background-color: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.stock-card h3 {
+    margin-top: 0;
+}
+
+.stock-card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stock-card span {
+    font-weight: bold;
+}
+
+.portfolio {
+    padding: 30px 40px;
+}
+
+.portfolio-card {
+    background-color: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.portfolio-card h3 {
+    margin-top: 0;
+}
+
+.portfolio-card p {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.holdings {
+    margin-top: 25px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.holdings h3 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f1f3f5;
+}
+#stock-search {
+    width: 300px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#stock-search:focus {
+    border-color: #555;
+}
+.summary-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background-color: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.summary-card h3 {
+    margin-top: 0;
+}
+
+.summary-card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.holdings button {
+    padding: 8px 14px;
+    margin: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.holdings button:hover {
+    opacity: 0.8;
+}
+@media (max-width: 600px) {
+
+    nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    h1 {
+        padding: 20px;
+        font-size: 28px;
+    }
+
+    .market,
+    .portfolio {
+        padding: 20px;
+    }
+
+    .stock-container {
+        flex-direction: column;
+    }
+
+    .stock-card {
+        width: auto;
+    }
+
+    .summary-container {
+        flex-direction: column;
+    }
+
+    .summary-card {
+        width: auto;
+    }
+
+    .holdings {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}
